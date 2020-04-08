@@ -1,0 +1,167 @@
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="top-title small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <h1 style="Margin:0;Margin-bottom:10px;color:inherit;font-family:sans-serif,Arial;font-size:20px;font-weight:400;line-height:1.3;margin:24px 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">
+                                Üdvözölünk,
+                                <span style="color:#13c98a"><%= @notification.subject.user.name %></span>!
+                            </h1>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="site-block" style="margin:0 auto">
+                                <p class="task-is-done" style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:22px;margin:0 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                    Az általad közzétett feladatra
+                                    <%= link_to "«#{ @notification.subject.title }»",
+                                            "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/#{@notification.subject.id}", # task_link,
+                                            {style: "Margin:0;color:#13c98a;font-family:sans-serif;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"} %>, jelentkezett egy szakember.
+                                </p>
+                                <div class="offer" style="border:1px solid #ede8f7;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1);box-sizing:border-box;margin:5px 15px;padding:18px 16px">
+                                    <div class="first-info" style="height:75px">
+                                        <span class="avatar" style="border:2px solid #3adb76;border-radius:50%;display:block;float:left;margin:0 5px 5px 0;vertical-align:top">
+                                            <%# User's avatar %>
+                                            <% if @notification.target.user.photo&.file&.url(:small).present? %>
+                                            <%= image_tag @notification.target.user.photo.file.url(:small),
+                                                          {alt: 'user', style: "-ms-interpolation-mode:bicubic;border:2px solid #fff;border-radius:50%;clear:both;display:block;height:62px;max-width:100%;outline:0;text-decoration:none;width:62px"} %>
+                                            <% end %>
+                                        </span>
+                                        <span class="name-block" style="display:block;float:left;width:68%">
+                                            <p class="name" style="Margin:0;Margin-bottom:10px;color:#2e09b6;font-family:sans-serif;font-size:16px;font-weight:400;line-height:22px;margin:5px 0 3px 6px!important;margin-bottom:10px;padding:0;text-align:left;vertical-align:middle">
+                                                <%= @notification.target.user.name %>
+                                                <%# Verified user's mark (shield with check sign) %>
+                                                <% if @notification.target.user.user_verification.id_confirmed? %>
+                                                <%= image_tag 'mails/shield.png',
+                                                                {alt: 'shield', class: "shield", style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;max-width:100%;outline:0;text-decoration:none;vertical-align:sub;width:auto"} %>
+                                                <% end %>
+                                            </p>
+                                            <p class="likes" style="Margin:0;Margin-bottom:10px;color:#6a6976;font-family:sans-serif;font-size:12px;font-weight:400;line-height:14px;margin:0 0 2px 7px!important;margin-bottom:10px;padding:0;text-align:left">
+                                                <%# Count of performer's likes %>
+                                                <span style="color:#6a6976;display:inline-block;font-size:12px;line-height:17px;margin-right:3px;vertical-align:middle">
+                                                    <%= image_tag 'mails/like.png',
+                                                                {alt: 'like', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;margin-right:4px;max-width:100%;outline:0;text-decoration:none;vertical-align:middle;width:13px"} %>
+                                                    <%= @notification.target.user.reviews_statistic[:positive] %>
+                                                </span>
+                                                <%# Count of performer's dislikes %>
+                                                <span style="color:#6a6976;display:inline-block;font-size:12px;line-height:17px;margin-right:3px;vertical-align:middle">
+                                                    <%= image_tag 'mails/dislike.png',
+                                                                {alt: 'dislike', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;margin-right:4px;max-width:100%;outline:0;text-decoration:none;vertical-align:middle;width:13px"} %>
+                                                    <%= @notification.target.user.reviews_statistic[:negative] %>
+                                                </span>
+                                            </p>
+                                            <!--likes block-->
+                                            <p class="place-in-rate" style="Margin:0;Margin-bottom:10px;color:#9b99aa;font-family:sans-serif;font-size:12px;font-weight:400;line-height:14px;margin:0 0 0 5px!important;margin-bottom:10px;padding:0;text-align:left">
+                                                <%= @notification.target.user.rating.round %>
+                                                Helyezett a/az «<%= @notification.target.task.category.name %>» kategóriában.
+                                            </p>
+                                        </span>
+                                    </div>
+                                    <div class="reserv-and-price" style="clear:both;display:block;margin-bottom:3px;margin-top:6px">
+                                        <span class="price" style="background:#ffda58;border-radius:4px;color:#1d1539;display:inline-block;font-family:sans-serif;font-size:16px;font-weight:600;line-height:25px;margin:0 2px 0 5px;padding:0 4px">
+                                            <%= @notification.target.budget.format %>
+                                        </span>
+                                        <%# SBR sign %>
+                                        <% if @notification.subject.payment_method == 'sbr' %>
+                                        <span class="no-risk" style="display:inline-block;vertical-align:middle">
+                                            <%= image_tag 'mails/no-risk.png',
+                                                          {alt: 'no-risk', style: "-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                        </span>
+                                        <% end %>
+                                    </div>
+                                    <div class="pay-via-card" style="margin-left:4px">
+                                        <p style="Margin:0;Margin-bottom:10px;color:#9b99aa;display:inline-block;font-family:sans-serif;font-size:12px;font-weight:400;letter-spacing:0;line-height:14px;margin:1px 1px 1px 2px;margin-bottom:10px;padding:0;text-align:left"></p>
+                                    </div>
+                                    <div class="self-description" style="margin-bottom:43px;margin-left:5px">
+                                        <%= @notification.target.description %>
+                                    </div>
+                                    <div class="buttons nocenter" style="text-align:initial;text-decoration:none">
+                                        <%# Choose performer %>
+                                        <%= link_to "Szakember kiválasztása",
+                                            "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/#{@notification.subject.id}", # task_link,
+                                            {class: "button inline", style: "Margin:0;background:#13c98a;border-radius:44px;color:#fff;display:inline-block;font-family:sans-serif;font-size:14px;font-weight:600;line-height:16px;margin:4px 5px;padding:8px 16px 10px 16px;text-align:center;text-decoration:none"} %>
+                                        <%# Start chat with performer %>
+                                        <a href="<%= root_url %>" class="button white inline" style="Margin:0;background:#fff;border:1px solid #9b99aa;border-radius:44px;box-sizing:border-box;color:#1d1539;display:inline-block;font-family:sans-serif;font-size:14px;font-weight:600;line-height:16px;margin:4px 5px;padding:8px 12px 8px 12px!important;text-align:center;text-decoration:none">
+                                            <%= image_tag 'mails/mail.png',
+                                                          {alt: 'mail', style: "-ms-interpolation-mode:bicubic;border:none;clear:both;display:inline-block;margin-right:5px;max-width:100%;outline:0;text-decoration:none;vertical-align:middle;width:auto"} %>
+                                            Írj egy üzenetet!
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <center data-parsed style="min-width:580px;width:100%">
+                                <div class="alert-message float-center" align="center" style="border:1px solid rgba(0,0,0,.1);border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1);box-sizing:border-box;display:block;margin:24px 15px 10px;min-height:210px;padding:12px 15px 12px 15px">
+                                    <%= image_tag 'mails/alert.png',
+                                                  {alt: 'alert', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;margin:15px 15px 15px 5px;max-width:100%;outline:0;text-decoration:none;vertical-align:middle;width:183px"} %>
+                                    <span style="color:#1d1539;display:inline-block;font-family:sans-serif;font-size:14px;line-height:20px;padding-top:0;text-align:left;vertical-align:middle;width:290px">
+                                        Ha értékes dolgokat, pénzt bíz a szakemberre, vagy beengedi a lakásába, minden esetben ellenőrizze a személyi igazolványát, és kérje meg, hogy írja alá a munkavégzéshez szükséges dokumentumokat
+                                        <%= link_to 'Dokumentum sablon',
+                                                    "#{ENV['PROTOCOL']}://#{ENV['HOST']}/uploads/voucher.docx",
+                                                    {class: "green-link noweight", style: "Margin:0;color:#13c98a;font-family:sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"} %>, és más
+                                        <%= link_to 'fontos tippek',
+                                                    "#{ENV['PROTOCOL']}://#{ENV['HOST']}/uploads/contract.docx",
+                                                    {class: "green-link noweight", style: "Margin:0;color:#13c98a;font-family:sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"} %>.
+                                    </span>
+                                </div>
+                            </center>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="text-block-offers margirl" style="margin:24px 15px 24px 15px!important">
+                                <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:14px;font-weight:400;line-height:20px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                    Megbízhatod a szakembert, vagy tovább várakozhatsz az újabb ajánlatokra. Ne felejtsd, az ajánlatoknak is van érvényeségük! Ahhoz, hogy rábízd a feladatot a szakemberre, nyomd meg a "Szakember kiválasztása" gombot az ajánlata alatt, a feladat oldalán.
+                                </p>
+                                <div class="buttons nocenter marginOrigin" style="margin:24px 0 20px 21px;text-align:initial;text-decoration:none">
+                                    <%= link_to 'Ugrás a feladatra',
+                                                "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/#{@notification.subject.id}",
+                                                {class: "button inline", style: "Margin:0;background:#13c98a;border-radius:44px;color:#fff;display:inline-block;font-family:sans-serif;font-size:14px;font-weight:600;line-height:16px;margin:4px 5px;padding:8px 16px 10px 16px;text-align:center;text-decoration:none"} %>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>

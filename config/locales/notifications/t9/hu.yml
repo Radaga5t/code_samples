@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    t9:
+      email:
+        title: "Elfogadták ajánlatodat a következő feladatra: \"#{ subject.title.truncate(20) }\"!"
+        message: "Elfogadták ajánlatodat a következő feladatra: \"#{ subject.title.truncate(20) }\"!"
+      viber:
+        title: "Elfogadták ajánlatodat a következő feladatra: \"#{ subject.title }\"!"
+        message: "Elfogadták ajánlatodat a következő feladatra: \"#{ subject.title }\"!"
+      site:
+        title: "Elfogadták ajánlatodat a következő feladatra: \"#{ subject.title.truncate(20) }\"!"
+        message: "Elfogadták ajánlatodat a következő feladatra: \"#{ subject.title.truncate(20) }\"!"

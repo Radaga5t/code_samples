@@ -1,0 +1,12 @@
+ru:
+  notifications:
+    s1:
+      email:
+        title: "Вы активировали безлимитный тариф на #{ target.service.duration } дней"
+        message: "Вы активировали безлимитный тариф на #{ target.service.duration } дней"
+      viber:
+        title: "Вы активировали безлимитный тариф на #{ target.service.duration } дней"
+        message: "Вы активировали безлимитный тариф на #{ target.service.duration } дней"
+      site:
+        title: "Вы активировали безлимитный тариф на #{ target.service.duration } дней"
+        message: "Вы активировали безлимитный тариф на #{ target.service.duration } дней"

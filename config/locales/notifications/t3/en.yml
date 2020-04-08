@@ -1,0 +1,12 @@
+en:
+  notifications:
+    t3:
+      email:
+        title: "#{ target.author.name } specialist declined to complete the task"
+        message: "#{ target.author.name } specialist declined to complete the task"
+      viber:
+        title: "#{ target.author.name } specialist declined to complete the task"
+        message: "#{ target.author.name } specialist declined to complete the task"
+      site:
+        title: "#{ target.author.name } specialist declined to complete the task"
+        message: "#{ target.author.name } specialist declined to complete the task"

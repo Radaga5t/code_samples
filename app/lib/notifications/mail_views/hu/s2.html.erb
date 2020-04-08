@@ -1,0 +1,75 @@
+<table class="row top-title" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <h1 style="Margin:0;Margin-bottom:10px;color:inherit;font-family:sans-serif,Arial;font-size:20px;font-weight:400;line-height:1.3;margin:24px 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">
+                                Üdvözöljük <span style="color:#13c98a">
+                                    <%= @notification.subject.user.name %></span>!
+                            </h1>
+                            <p style="Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:sans-serif,arial;font-size:16px;font-weight:400;line-height:1.3;margin:10px 15px 5px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                Korlátlan csomagjának érvényessége lejárt:
+                            </p>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row twelfth" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="list full-width" style="background-color:#fff;border:1px solid #ede8f7;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1),0 2px 4px rgba(32,32,32,.05);box-sizing:border-box;margin:12px 15px 12px 15px;padding:24px">
+                                <div class="text" style="display:inline-block;vertical-align:top;width:100%!important">
+                                    <p style="Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                        Az ön
+                                        <%= @notification.target.service.name %>
+                                        csomagjának érvényessége lejárt. Kérjük, hosszabbítsa meg!
+                                    </p>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                        A csomag aktiválási időpontja:
+                                        <span style="font-weight:600">
+                                            <%= @notification.target.service.created_at
+                                                                            .strftime("%Y-%m-%D %H:%M") %>
+                                        </span>.
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="text-block-offers margirl" style="margin:24px 15px 24px 15px!important">
+                                <div class="buttons nocenter marginOrigin" style="margin:24px 0 20px 21px;text-align:initial">
+                                    <%= link_to 'Meghosszabbítom',
+                                                root_url,
+                                                {class: "button inline", style: "Margin:0;background:#13c98a;border-radius:44px;color:#fff;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:600;line-height:16px;margin:4px 5px;padding: 9px 16px 11px 16px;text-align:center;text-decoration:none"} %>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>

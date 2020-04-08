@@ -1,0 +1,12 @@
+en:
+  notifications:
+    t10:
+      email:
+        title: "Another specialist was chosen in a task \"#{ subject.title.truncate(20) }\""
+        message: "Another specialist was chosen in a task \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "Another specialist was chosen in a task \"#{ subject.title.truncate(20) }\""
+        message: "Another specialist was chosen in a task \"#{ subject.title.truncate(20) }\""
+      site:
+        title: "Another specialist was chosen in a task \"#{ subject.title.truncate(20) }\""
+        message: "Another specialist was chosen in a task \"#{ subject.title.truncate(20) }\""

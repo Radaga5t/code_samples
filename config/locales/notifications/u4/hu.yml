@@ -1,0 +1,11 @@
+hu:
+  notifications:
+    u4:
+      email:
+        title: Gratulálunk, szakemberként regisztráltál a Qjob.hu-n!
+        message: Gratulálunk, szakemberként regisztráltál a Qjob.hu-n!
+      viber:
+        message: Gratulálunk, szakemberként regisztráltál a Qjob.hu-n!
+      site:
+        title: Gratulálunk, szakemberként regisztráltál a Qjob.hu-n!
+        message: Gratulálunk, szakemberként regisztráltál a Qjob.hu-n!

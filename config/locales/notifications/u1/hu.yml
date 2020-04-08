@@ -1,0 +1,6 @@
+hu:
+  notifications:
+    u1:
+      email:
+        title: Ön sikeresen túljutott a dokumentumok ellenőrzési folyamatán
+        message: Ön sikeresen túljutott a dokumentumok ellenőrzési folyamatán

@@ -1,0 +1,12 @@
+ru:
+  notifications:
+    t4:
+      email:
+        title: "Заказчик #{ target.author.name } отметил, что задание не выполнено"
+        message: "Заказчик #{ target.author.name } отметил, что задание не выполнено"
+      viber:
+        title: "Заказчик #{ target.author.name } отметил, что задание не выполнено"
+        message: "Заказчик #{ target.author.name } отметил, что задание не выполнено"
+      site:
+        title: "Заказчик #{ target.author.name } отметил, что задание не выполнено"
+        message: "Заказчик #{ target.author.name } отметил, что задание не выполнено"

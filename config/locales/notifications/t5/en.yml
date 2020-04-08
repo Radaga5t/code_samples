@@ -1,0 +1,12 @@
+en:
+  notifications:
+    t5:
+      email:
+        title: "Client #{ target.author.name } informed us, that you completed the task"
+        message: "Client #{ target.author.name } informed us, that you completed the task"
+      viber:
+        title: "Client #{ target.author.name } informed us, that you completed the task"
+        message: "Client #{ target.author.name } informed us, that you completed the task"
+      site:
+        title: "Client sent a review of task: \"#{ subject.title.truncate(20) }\""
+        message: "Client sent a review of task: \"#{ subject.title.truncate(20) }\""

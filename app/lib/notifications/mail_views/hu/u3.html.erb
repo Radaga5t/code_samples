@@ -1,0 +1,111 @@
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="top-title small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <h1 style="Margin:0;Margin-bottom:10px;color:inherit;font-family:sans-serif,Arial;font-size:20px;font-weight:400;line-height:1.3;margin:24px 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">
+                                Üdvözlünk, <span style="color:#13c98a"><%= @notification.target.name %></span>!
+                            </h1>
+                            <p style="Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:sans-serif,arial;font-size:16px;font-weight:400;line-height:1.3;margin:10px 15px 5px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                <%= @notification.target.name %>, most már kényelmesen megoldhatsz bármilyen feladatot, és időt spórolhatsz a Qjob.hu segítségével. Ehhez csak annyit kell tenned, hogy
+                                <%= link_to 'közzéteszel egy feladatot',
+                                            "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/new",
+                                            {style: "Margin:0;color:#13c98a;font-family:sans-serif,Arial;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"} %>, és szakembereink máris ajánlatot tesznek az általad létrehozott feladatra.
+                            </p>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="list" style="background-color:#fff;border:1px solid #ede8f7;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1),0 2px 4px rgba(32,32,32,.05);box-sizing:border-box;margin:12px 15px 12px 15px;padding:24px">
+                                <div class="image-block" style="display:inline-block;width:30%">
+                                    <%= image_tag 'mails/safety-shield.png',
+                                                  {alt: 'safe-shield', style: "-ms-interpolation-mode:bicubic;border-radius:50%;clear:both;display:block;height:auto;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                </div>
+                                <div class="text" style="display:inline-block;vertical-align:top;width:64%">
+                                    <h3 style="Margin:0;Margin-bottom:10px;color:inherit;font-family:sans-serif,Arial;font-size:18px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">
+                                        Valóban megéri!
+                                    </h3>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                        A Qjob.hu szakembereinél a díjazás akár 30-70%-al kedvezőbb, mint a szolgáltató cégeknél.
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="list" style="background-color:#fff;border:1px solid #ede8f7;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1),0 2px 4px rgba(32,32,32,.05);box-sizing:border-box;margin:12px 15px 12px 15px;padding:24px">
+                                <div class="image-block" style="display:inline-block;width:30%">
+                                    <%= image_tag 'mails/search.png',
+                                                  {alt: 'search', style: "-ms-interpolation-mode:bicubic;border-radius:50%;clear:both;display:block;height:auto;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                </div>
+                                <div class="text" style="display:inline-block;vertical-align:top;width:64%">
+                                    <h3 style="Margin:0;Margin-bottom:10px;color:inherit;font-family:sans-serif,Arial;font-size:18px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">
+                                        Nagyon kényelmes
+                                    </h3>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                        Tegyél közzé egy feladatot, hasonlítsd össze a szakemberek ajánlatait, és válaszd ki a számodra legjobban megfelelő ajánlatot, szakembert!
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="list" style="background-color:#fff;border:1px solid #ede8f7;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1),0 2px 4px rgba(32,32,32,.05);box-sizing:border-box;margin:12px 15px 12px 15px;padding:24px">
+                                <div class="image-block" style="display:inline-block;width:30%">
+                                    <%= image_tag 'mails/master.png',
+                                                  {alt: 'master', style: "-ms-interpolation-mode:bicubic;border-radius:50%;clear:both;display:block;height:auto;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                </div>
+                                <div class="text" style="display:inline-block;vertical-align:top;width:64%">
+                                    <h3 style="Margin:0;Margin-bottom:10px;color:inherit;font-family:sans-serif,Arial;font-size:18px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">
+                                        Megbízható
+                                    </h3>
+                                    <p style="Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                        Mindegyik szakemberünket, közreműködőnket ellenőrizzük, mielőtt elkezdik nálunk a tevékenységüket. Csak a megfelelő visszajelzésekkel rendelkező szakembereket maradnak az adatbázisunkban.
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>

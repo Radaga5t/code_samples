@@ -1,0 +1,12 @@
+ru:
+  notifications:
+    t1:
+      email:
+        title: "Вы успешно опубликовали задание \"#{ subject.title.truncate(20) }\""
+        message: "Вы успешно опубликовали задание \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "Вы успешно опубликовали задание \"#{ subject.title.truncate(20) }\""
+        message: "Вы успешно опубликовали задание \"#{ subject.title.truncate(20) }\""
+      site:
+        title: "Вы успешно опубликовали задание \"#{ subject.title.truncate(20) }\""
+        message: "Вы успешно опубликовали задание \"#{ subject.title.truncate(20) }\""

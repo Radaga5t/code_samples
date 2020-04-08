@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    t4:
+      email:
+        title: "#{ target.author.name } megrendelőnk jelezte, a feladatot nem teljesítetted"
+        message: "#{ target.author.name } megrendelőnk jelezte, a feladatot nem teljesítetted"
+      viber:
+        title: "#{ target.author.name } megrendelőnk jelezte, a feladatot nem teljesítetted"
+        message: "#{ target.author.name } megrendelőnk jelezte, a feladatot nem teljesítetted"
+      site:
+        title: "#{ target.author.name } megrendelőnk jelezte, a feladatot nem teljesítetted"
+        message: "#{ target.author.name } megrendelőnk jelezte, a feladatot nem teljesítetted"

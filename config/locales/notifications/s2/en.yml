@@ -1,0 +1,12 @@
+en:
+  notifications:
+    s2:
+      email:
+        title: Unlimited tariff has expired
+        message: Unlimited tariff has expired
+      viber:
+        title: Unlimited tariff has expired
+        message: Unlimited tariff has expired
+      site:
+        title: Unlimited tariff has expired
+        message: Unlimited tariff has expired

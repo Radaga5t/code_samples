@@ -1,0 +1,12 @@
+en:
+  notifications:
+    t4:
+      email:
+        title: "Client #{ target.author.name } informed us, that you missed to complete the task"
+        message: "Client #{ target.author.name } informed us, that you missed to complete the task"
+      viber:
+        title: "Client #{ target.author.name } informed us, that you missed to complete the task"
+        message: "Client #{ target.author.name } informed us, that you missed to complete the task"
+      site:
+        title: "Client #{ target.author.name } informed us, that you missed to complete the task"
+        message: "Client #{ target.author.name } informed us, that you missed to complete the task"

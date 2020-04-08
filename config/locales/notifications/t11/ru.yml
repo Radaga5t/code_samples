@@ -1,0 +1,12 @@
+ru:
+  notifications:
+    t11:
+      email:
+        title: "Вам отправлено предложение на выполнение задания \"#{ subject.title.truncate(20) }\""
+        message: "Вам отправлено предложение на выполнение задания \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "Вам отправлено предложение на выполнение задания \"#{ subject.title }\""
+        message: "Вам отправлено предложение на выполнение задания \"#{ subject.title }\""
+      site:
+        title: "Вам отправлено предложение на выполнение задания \"#{ subject.title.truncate(20) }\""
+        message: "Вам отправлено предложение на выполнение задания \"#{ subject.title.truncate(20) }\""

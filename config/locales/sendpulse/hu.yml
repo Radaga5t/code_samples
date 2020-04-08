@@ -1,0 +1,6 @@
+hu:
+  sendpulse:
+    sms_confirmation: "Qjob.hu visszaigazoló kódod: %{code}"
+    viber:
+      button_text: "Ugrás a feladathoz"
+

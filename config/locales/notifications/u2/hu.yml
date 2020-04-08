@@ -1,0 +1,6 @@
+hu:
+  notifications:
+    u2:
+      email:
+        title: Felhasználói e-mail megerősítés
+        message: Felhasználói e-mail megerősítés

@@ -1,0 +1,12 @@
+en:
+  notifications:
+    t9:
+      email:
+        title: "You are selected as a specialist in a task \"#{ subject.title.truncate(20) }\""
+        message: "You are selected as a specialist in a task \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "You are selected as a specialist in a task \"#{ subject.title }\""
+        message: "You are selected as a specialist in a task \"#{ subject.title }\""
+      site:
+        title: "You are selected as a specialist in a task \"#{ subject.title.truncate(20) }\""
+        message: "You are selected as a specialist in a task \"#{ subject.title.truncate(20) }\""

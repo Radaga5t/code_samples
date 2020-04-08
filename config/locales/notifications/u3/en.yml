@@ -1,0 +1,11 @@
+en:
+  notifications:
+    u3:
+      email:
+        title: First steps on Qjob
+        message: First steps on Qjob
+      viber:
+        message: First steps on Qjob
+      site:
+        title: First steps on Qjob
+        message: First steps on Qjob

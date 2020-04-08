@@ -1,0 +1,249 @@
+<table class="row top-title" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;text-align:left">
+                            <h1 style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif,Arial;font-size:20px;font-weight:400;line-height:36px;margin:10px 15px;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">
+                                Üdvözlünk, <span style="color:#13c98a"><%= @notification.user.name %></span>!
+                            </h1>
+                            <p style="Margin:0;Margin-bottom:10px;color:#0a0a0a;font-family:sans-serif,arial;font-size:16px;font-weight:400;line-height:1.3;margin:10px 15px 5px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                Új feladat, <%= link_to "«#{ @notification.subject.title }»",
+                                                                                        "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/#{@notification.subject.id}",
+                                                                                        {style: "Margin:0;color:#13c98a;font-family:sans-serif,Arial;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"} %>, érkezett a következő kategóriába: "<%= @notification.target.name %>". Küldj egy ajánlatot!
+                            </p>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;padding-left:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row qjob-task-block" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                            <div class="site-block" style="margin:0 auto">
+                                <div class="bordered-block" style="border:1px solid #ede8f7;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1);box-sizing:border-box;margin:15px 15px 24px;padding:21px 24px 24px 24px">
+                                    <% if @notification.subject.address %>
+                                    <table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                        <tbody>
+                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                <th class="small-12 large-3 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:25%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <p class="title first" style="Margin:0;Margin-bottom:10px;clear:both;color:#1d1539;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:700;line-height:20px;margin:0;margin-bottom:14px;margin-top:0;padding:0;text-align:left">
+                                                                    Hely
+                                                                </p>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                                <th class="small-12 large-9 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:75%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <p style="Margin:0;Margin-bottom:10px;color:#1d1539;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:20px;margin:0;margin-bottom:14px;margin-top:2px;padding:0;text-align:left">
+                                                                    <%= @notification.subject.address %>
+                                                                </p>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <% end %>
+                                    <% if @notification.subject&.address_data.present? %>
+                                    <table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                        <tbody>
+                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:100%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <a href="<%= "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/#{@notification.subject.id}" %>"
+                                                                   style="Margin:0;color:#2199e8;font-family:sans-serif,Arial;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none">
+                                                                    <%= image_tag map_for_task(@notification.subject),
+                                                                                  {alt: 'map', class: "map-image", style: "-ms-interpolation-mode:bicubic;border:none;border-radius:8px;clear:both;display:block;margin:11px 0 18px 0;max-width:100%;outline:0;text-decoration:none;width:100%"} %>
+                                                                </a>
+                                                            </th>
+                                                            <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;padding-left:0!important;padding-right:0;text-align:left;visibility:hidden;width:0"></th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <% end %>
+                                    <% if @notification.subject.task_date_from %>
+                                    <table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                        <tbody>
+                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                <th class="small-12 large-3 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:25%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <p class="title" style="Margin:0;Margin-bottom:10px;clear:both;color:#1d1539;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:700;line-height:20px;margin:0;margin-bottom:14px;margin-top:2px;padding:0;text-align:left">
+                                                                    Kezdés
+                                                                </p>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                                <th class="small-12 large-9 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:75%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <div style="display:block;margin-bottom:14px;margin-top:2px">
+                                                                    <span class="flame" style="background:#ede8f7;border-radius:4px;color:#1d1539;font-size:12px;line-height:20px;padding:4px 6px">
+                                                                        <%= @notification.subject.task_date_from
+                                                                                                 .strftime('%Y-%m-%d %H:%M')  %>
+                                                                    </span>
+                                                                </div>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <% end %>
+                                    <% if @notification.subject.task_date_until %>
+                                    <table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                        <tbody>
+                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                <th class="small-12 large-3 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:25%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <p class="title" style="Margin:0;Margin-bottom:10px;clear:both;color:#1d1539;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:700;line-height:20px;margin:0;margin-bottom:14px;margin-top:2px;padding:0;text-align:left">
+                                                                    Határidő
+                                                                </p>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                                <th class="small-12 large-9 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:75%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <div style="display:block;margin-bottom:14px;margin-top:2px">
+                                                                    <span class="flame" style="background:#ede8f7;border-radius:4px;color:#1d1539;font-size:12px;line-height:20px;padding:4px 6px">
+                                                                        <%= @notification.subject.task_date_until
+                                                                                                 .strftime('%Y-%m-%d %H:%M')  %>
+                                                                    </span>
+                                                                </div>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <% end %>
+                                    <table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                        <tbody>
+                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                <th class="small-12 large-3 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:25%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <p class="title" style="Margin:0;Margin-bottom:10px;clear:both;color:#1d1539;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:700;line-height:20px;margin:0;margin-bottom:14px;margin-top:2px;padding:0;text-align:left">
+                                                                    Kifizetés
+                                                                </p>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                                <th class="small-12 large-9 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:75%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <p style="Margin:0;Margin-bottom:10px;color:#1d1539;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:20px;margin:0;margin-bottom:14px;margin-top:2px;padding:0;text-align:left">
+                                                                    <% if @notification.subject&.payment_method == 'sbr' %>
+                                                                    Kockázatmentes üzlet
+                                                                    <% else %>
+                                                                    Készpénzes
+                                                                    <% end %>
+                                                                </p>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+                                        <tbody>
+                                            <tr style="padding:0;text-align:left;vertical-align:top">
+                                                <th class="small-12 large-3 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:25%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <p class="title" style="Margin:0;Margin-bottom:10px;clear:both;color:#1d1539;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:700;line-height:20px;margin:0;margin-bottom:14px;margin-top:2px;padding:0;text-align:left">
+                                                                    Ár
+                                                                </p>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                                <th class="small-12 large-9 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0!important;text-align:left;width:75%">
+                                                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                                                        <tr style="padding:0;text-align:left;vertical-align:top">
+                                                            <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;padding-right:0;text-align:left">
+                                                                <p class="price" style="Margin:0;Margin-bottom:10px;color:#1d1539;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:20px;margin:0;margin-bottom:14px;margin-top:2px;padding:0;text-align:left">
+                                                                    <span class="price-block" style="background:#ffda58;border-radius:4px;color:#1d1539;display:inline-block;font-family:sans-serif;font-size:14px;font-weight:600;line-height:16px;padding:4px 8px">
+                                                                        <%= @notification.subject.budget.format %>
+                                                                    </span>
+                                                                    <%# <span style="display:inline-block">, amely tartalmazza a
+                                                                    </span>
+                                                                    <span style="display:inline-block">
+                                                                        <%= @notification.subject.budget_cents * 0.05
+                                                                        szolgáltatási díjat.
+                                                                    </span> %>
+                                                                </p>
+                                                            </th>
+                                                        </tr>
+                                                    </table>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row block-tips" style="border-collapse:collapse;border-spacing:0;display:table;margin:0;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0!important;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;padding-left:0!important;text-align:left">
+                            <div class="wrapper" style="color:#1d1539;display:block;font-family:sans-serif,Arial;font-size:12px;line-height:20px;margin:0 15px;margin-right:15px;width:100%">
+                                <div class="buttons nocenter marginOrigin no-top-margin" style="color:#1d1539;display:block;font-family:sans-serif,Arial;font-size:12px;line-height:20px;margin:24px 0 20px 21px;margin-right:15px;margin-top:0!important;text-align:initial">
+                                    <%= link_to 'Küldök egy ajánlatot!',
+                                                "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/#{@notification.subject.id}",
+                                                {class: "button inline", style: "Margin:0;background:#13c98a;border-radius:44px;color:#fff;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:600;line-height:16px;margin:4px 5px;padding: 9px 16px 11px 16px;text-align:center;text-decoration:none"} %>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;padding-left:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>

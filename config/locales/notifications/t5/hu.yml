@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    t5:
+      email:
+        title: "#{ target.author.name } megrendelőnk jelezte, a feladatot teljesítetted"
+        message: "#{ target.author.name } megrendelőnk jelezte, a feladatot teljesítetted"
+      viber:
+        title: "#{ target.author.name } megrendelőnk jelezte, a feladatot teljesítetted"
+        message: "#{ target.author.name } megrendelőnk jelezte, a feladatot teljesítetted"
+      site:
+        title: "A megrendelő értékelte a következő feladatot: \"#{ subject.title.truncate(20) }\""
+        message: "A megrendelő értékelte a következő feladatot: \"#{ subject.title.truncate(20) }\""

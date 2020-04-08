@@ -1,0 +1,11 @@
+ru:
+  notifications:
+    u2:
+      email:
+        title: Подтверждение email пользователя
+        message: Подтверждение email пользователя
+      viber:
+        message: Подтверждение email пользователя
+      site:
+        title: Подтверждение email пользователя
+        message: Подтверждение email пользователя

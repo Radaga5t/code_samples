@@ -1,0 +1,12 @@
+en:
+  notifications:
+    t1:
+      email:
+        title: "You have successfully published task: \"#{ subject.title.truncate(20) }\""
+        message: "You have successfully published task: \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "You have successfully published task: \"#{ subject.title.truncate(20) }\""
+        message: "You have successfully published task: \"#{ subject.title.truncate(20) }\""
+      site:
+        title: "You have successfully published task: \"#{ subject.title.truncate(20) }\""
+        message: "You have successfully published task: \"#{ subject.title.truncate(20) }\""

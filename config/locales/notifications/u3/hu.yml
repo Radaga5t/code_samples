@@ -1,0 +1,11 @@
+hu:
+  notifications:
+    u3:
+      email:
+        title: Első lépések a Qjob.hu-n!
+        message: Első lépések a Qjob.hu-n!
+      viber:
+        message: Első lépések a Qjob.hu-n!
+      site:
+        title: Első lépések a Qjob.hu-n!
+        message: Első lépések a Qjob.hu-n!

@@ -1,0 +1,13 @@
+default: &default
+  url: https://api.sendpulse.com
+  user_id: <%= Rails.application.credentials.dig(:sendpulse, :user_id) %>
+  secret: <%= Rails.application.credentials.dig(:sendpulse, :secret) %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

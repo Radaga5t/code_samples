@@ -1,0 +1,6 @@
+hu:
+  notifications:
+    u6:
+      email:
+        title: Az ön adatlapja letiltásra került!
+        message: Az ön adatlapja letiltásra került!

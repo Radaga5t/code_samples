@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    t11:
+      email:
+        title: "Másik szakembert választottak a következő feladatra: \"#{ subject.title.truncate(20) }\""
+        message: "Másik szakembert választottak a következő feladatra: \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "Másik szakembert választottak a következő feladatra: \"#{ subject.title }\""
+        message: "Másik szakembert választottak a következő feladatra: \"#{ subject.title }\""
+      site:
+        title: "Másik szakembert választottak a következő feladatra: \"#{ subject.title.truncate(20) }\""
+        message: "Másik szakembert választottak a következő feladatra: \"#{ subject.title.truncate(20) }\""

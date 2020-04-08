@@ -1,0 +1,12 @@
+en:
+  notifications:
+    s1:
+      email:
+        title: "You have activated the unlimited tariff for #{ target.service.duration } days"
+        message: "You have activated the unlimited tariff for #{ target.service.duration } days"
+      viber:
+        title: "You have activated the unlimited tariff for #{ target.service.duration } days"
+        message: "You have activated the unlimited tariff for #{ target.service.duration } days"
+      site:
+        title: "You have activated the unlimited tariff for #{ target.service.duration } days"
+        message: "You have activated the unlimited tariff for #{ target.service.duration } days"

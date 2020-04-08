@@ -1,0 +1,12 @@
+ru:
+  notifications:
+    t3:
+      email:
+        title: "Исполнитель #{ target.author.name } отметил, что не выполнил задание"
+        message: "Исполнитель #{ target.author.name } отметил, что не выполнил задание"
+      viber:
+        title: "Исполнитель #{ target.author.name } отметил, что не выполнил задание"
+        message: "Исполнитель #{ target.author.name } отметил, что не выполнил задание"
+      site:
+        title: "Исполнитель #{ target.author.name } отметил, что не выполнил задание"
+        message: "Исполнитель #{ target.author.name } отметил, что не выполнил задание"

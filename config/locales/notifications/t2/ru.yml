@@ -1,0 +1,12 @@
+ru:
+  notifications:
+    t2:
+      email:
+        title: "Новые предложения к заданию \"#{ subject.title.truncate(20) }\""
+        message: "Новые предложения к заданию \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "Новые предложения к заданию \"#{ subject.title }\""
+        message: "Новые предложения к заданию \"#{ subject.title }\""
+      site:
+        title: "#{ subject.task_responses_count } новых предложений к заданию \"#{ subject.title.truncate(20) }\""
+        message: "#{ subject.task_responses_count } новых предложений к заданию \"#{ subject.title.truncate(20) }\""

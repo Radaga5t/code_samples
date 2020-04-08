@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="HandheldFriendly" content="true" />
+        <%= display_meta_tags site: 'Qjob' %>
+        <%= stylesheet_link_tag 'blog/manifest', media: 'all' %>
+        <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css', media: 'all' %>
+    </head>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v5.0&appId=622616404938971&autoLogAppEvents=1"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M5GDKMJ');</script>
+    <!-- End Google Tag Manager -->
+
+    <body class=<%=@header_class || "blog" %> >
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5GDKMJ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+        <header class=<%=@header_class || "blog" %> >
+            <div class="logo">
+                <a href="/">
+                    <%= image_tag "blog/#{@header_class || "blog"}logo.png"%></a>
+            </div>
+            <div class="mobilemenu">
+                <div class="hamburger hamburger--3dx" onclick="sidebarBlog()">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="sidebar-blog" class=<%=@header_class || "blog" %>>
+            <div class="additional_layer" id="additional_layer"></div>
+            <ul class="nav">
+                <li>
+                    <b>
+                        Hogyan működik?
+                    </b>
+                </li>
+                <li>
+                    <a href="/info/executor"> Hogyan lehetsz szakember?
+                    </a>
+                </li>
+                <li>
+                    <a href="/info/safety-deal">Kockázatmentes üzlet
+                    </a>
+                </li>
+                <li>
+                    <a href="/info/subscriptions">Árak / Díjszabás / Díjak - környezetfüggő
+                    </a>
+                </li>
+                <li>
+                    <a href="/info/guarantees">Biztonság és garanciák
+                    </a>
+                </li>
+                <li>
+                    <a href="/info/contacts">Kapcsolattartási adatok
+                    </a>
+                </li>
+                <li>
+                    <a href="/info/terms">Kapcsolattartási adatok
+                    </a>
+                </li>
+                <li>
+                    <a href="/info/privacy">Adatvédelem
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- Before dynamic content -->
+        <%= yield %>
+        <!-- After dynamic content -->
+        <footer>
+            <div class="logo_copyright">
+                <div class="logo">
+                    <%= image_tag 'blog/logo_footer.png'%>
+                </div>
+                <nav class="social_pages">
+                    <a href="https://www.youtube.com/channel/UCNUs87NG1W4jLULSTZEtr1g">
+                        <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px;">
+                            <path d="M5.41341 14.8516C7.15244 14.9498 8.80318 15 10.3194 15C11.8357 15 13.2728 14.9498 14.5909 14.8511C15.6383
+             14.7724 16.4155 13.9606 16.5248 12.8313C16.7141 10.878 16.7138 8.97237 16.5246 7.16602C16.4045 6.02513
+             15.6265 5.21443 14.5881 5.1484C11.4964 4.95053 8.41034 4.95053 5.4111 5.1484C4.38471 5.21606 3.58882
+             6.04635 3.47562 7.1671C3.28588 9.03815 3.28588 10.9441 3.47562 12.8321C3.58906 13.9622 4.38602 14.7925
+             5.41341 14.8516ZM8.33331 12.5V7.5L13.3333 10.0169L8.33331 12.5Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/Qjob.Hungary/">
+                        <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px;">
+                            <path d="M7.9558 13.4506C7.9558 12.4802 7.95205 11.5098 7.95933 10.5395C7.96066 10.376 7.91406 10.3248 7.74926
+             10.3315C7.44467 10.3437 7.13925 10.3302 6.83427 10.3372C6.71077 10.3403 6.66528 10.3063 6.66666
+             10.1765C6.67278 9.57103 6.67218 8.96523 6.66726 8.35965C6.66616 8.24318 6.70149 8.20487 6.82014
+             8.2075C7.13196 8.21462 7.44445 8.19884 7.75572 8.21413C7.93615 8.2229 7.97347 8.15927 7.96971
+             7.99308C7.95884 7.53231 7.95884 7.07081 7.969 6.60998C7.98142 6.04715 8.13358 5.52164 8.47129
+             5.06404C8.89862 4.48444 9.5062 4.21949 10.2071 4.18847C10.927 4.15673 11.6487 4.17433 12.3695
+             4.16665C12.47 4.1655 12.4999 4.20118 12.4995 4.29814C12.4963 4.91052 12.4956 5.52312 12.4999
+             6.1355C12.5009 6.24446 12.4651 6.27778 12.3574 6.27608C12.0107 6.27071 11.664 6.27334 11.3176
+             6.27428C10.8562 6.2757 10.58 6.51132 10.5511 6.9647C10.5279 7.3282 10.5449 7.69388 10.5364
+             8.05842C10.5332 8.18831 10.6109 8.17938 10.6975 8.17927C11.2243 8.1785 11.7512 8.18448 12.278
+             8.17554C12.4326 8.17286 12.4837 8.20821 12.466 8.36979C12.3997 8.97827 12.3427 9.58791 12.2902
+             10.1979C12.2782 10.3355 12.2149 10.3618 12.0904 10.3597C11.6748 10.3533 11.2588 10.3553 10.8429
+             10.3579C10.5442 10.3597 10.5732 10.3145 10.5732 10.6169C10.5718 12.5163 10.5692 14.4158 10.5774
+             16.3151C10.5783 16.5157 10.5266 16.5655 10.3267 16.562C9.61286 16.5489 8.89862 16.5483 8.18476
+             16.5623C7.98357 16.5662 7.95045 16.4985 7.95205 16.3204C7.95967 15.3638 7.9558 14.4073 7.9558 13.4506Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/qjob.hu/">
+                        <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px;">
+                            <path d="M7.27273 2.5H12.7273C15.3632 2.5 17.5 4.63682 17.5 7.27273V12.7273C17.5 15.3632 15.3632 17.5 12.7273
+             17.5H7.27273C4.63682 17.5 2.5 15.3632 2.5 12.7273V7.27273C2.5 4.63682 4.63682 2.5 7.27273 2.5ZM7.40741
+             4.16667C5.6176 4.16667 4.16667 5.6176 4.16667 7.40741V12.5926C4.16667 14.3824 5.6176 15.8333 7.40741
+             15.8333H12.5926C14.3824 15.8333 15.8333 14.3824 15.8333 12.5926V7.40741C15.8333 5.6176 14.3824 4.16667
+             12.5926 4.16667H7.40741ZM15 6.66708C15.0002 6.20692 14.6274 5.83367 14.1673 5.83333C13.9462 5.83317
+             13.734 5.92089 13.5776 6.07719C13.4212 6.23349 13.3333 6.44555 13.3333 6.66667C13.3333 7.12682 13.7063
+             7.49989 14.1665 7.5C14.6266 7.50011 14.9998 7.12724 15 6.66708ZM10 6.66667C11.841 6.66667 13.3333 8.15905
+             13.3333 10C13.3333 11.841 11.841 13.3333 10 13.3333C8.15905 13.3333 6.66667 11.841 6.66667 10C6.66667
+             8.15905 8.15905 6.66667 10 6.66667ZM11.6667 10C11.6667 9.07952 10.9205 8.33333 10 8.33333C9.07952 8.33333
+             8.33333 9.07952 8.33333 10C8.33333 10.9205 9.07952 11.6667 10 11.6667C10.9205 11.6667 11.6667 10.9205
+             11.6667 10Z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/QjobHU">
+                        <svg viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px;">
+                            <path d="M18 4.57754C17.4111 4.84525 16.7792 5.0268 16.1153 5.10785C16.7932 4.6914 17.3121 4.03085 17.5581
+              3.24617C16.9222 3.63183 16.2203 3.91187 15.4724 4.06368C14.8736 3.40825 14.0217 3 13.0769 3C11.2642 3 9.7945
+              4.50781 9.7945 6.36641C9.7945 6.63001 9.82349 6.88747 9.87949 7.13366C7.15201 6.99311 4.73347 5.65251 3.11477
+              3.61541C2.83182 4.11187 2.67085 4.69035 2.67085 5.30786C2.67085 6.47616 3.25075 7.50701 4.13059 8.11011C3.59268
+              8.09166 3.08677 7.93985 2.64387 7.68752V7.72957C2.64387 9.36046 3.77566 10.7216 5.27637 11.0314C5.00142 11.1073
+              4.71148 11.1493 4.41153 11.1493C4.19959 11.1493 3.99462 11.1278 3.79365 11.0868C4.21156 12.4253 5.42335 13.3987
+              6.85909 13.4254C5.73629 14.328 4.32055 14.8645 2.78285 14.8645C2.51791 14.8645 2.25694 14.8481 2 14.8183C3.45273
+              15.7753 5.17742 16.3333 7.03107 16.3333C13.0689 16.3333 16.3693 11.2027 16.3693 6.75312L16.3583 6.31719C17.0032
+              5.84533 17.5611 5.25247 18 4.57754Z"></path>
+                        </svg>
+                    </a><a href="https://www.linkedin.com/company/qjob-hu/">
+                        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" xml:space="preserve" style="width: 18px; height: 18px;">
+                            <path d="M5.9,4.1c0,1-0.7,1.8-1.9,1.8h0C2.7,5.9,2,5.1,2,4.1c0-1,0.8-1.8,1.9-1.8C5.1,2.4,5.8,3.1,5.9,4.1z M2.2,17.6h3.4V7.3H2.2 C2.2,7.3,2.2,17.6,2.2,17.6z M14.1,7.1c-1.8,0-2.6,1-3.1,1.7v0h0c0,0,0,0,0,0V7.3H7.5c0,1,0,10.3,0,10.3H11v-5.8 c0-0.3,0-0.6,0.1-0.8c0.2-0.6,0.8-1.3,1.8-1.3c1.2,0,1.7,0.9,1.7,2.3v5.5H18v-5.9C18,8.6,16.3,7.1,14.1,7.1z"></path>
+                        </svg>
+                    </a>
+                </nav>
+                <div class="store_buttons">
+                    <span>Mobil alkalmazás</span>
+                    <div>
+                        <a href="#">
+                            <%= image_tag 'blog/applestore_footer.png', alt: ''%>
+                        </a>
+                        <a href="#">
+                            <%= image_tag 'blog/googleplay_footer.png', alt: ''%>
+                        </a>
+                    </div>
+                </div>
+                <p>
+                    Qjob 2019
+                </p>
+            </div>
+            <div class="footer_menu">
+                <div>
+                    <ul>
+                        <li><a href="/info/how-it-works">Hogyan is működik?</a></li>
+                        <li><a href="/info/executor">Hogyan lehetsz szakember?</a></li>
+                        <li><a href="/info/safety-deal">Kockázatmentes üzlet</a></li>
+                        <li><a href="/info/subscriptions">Előfizetések</a></li>
+                        <li><a href="/info/guarantees">Bizalom és garancia</a></li>
+                        <li><a href="/info/faq">Gyakori kérdések</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Blog</h3>
+                    <ul>
+                        <li>
+                            <a href="/blog/articles">Sikertörténetek</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Rólunk</h3>
+                    <ul>
+                        <li><a href="https://qjob.netlab.pro/info/contacts">Elérhetőségeink</a></li>
+                        <li><a href="javascript:void(0)">Ügyfélszolgálat</a></li>
+                        <li><a href="/info/terms">Általános Szerződési Feltételek</a></li>
+                        <li><a href="/info/privacy">Adatvédelmi Szabályzat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js' %>
+        <%= javascript_include_tag 'blog/manifest' %>
+        <%= javascript_include_tag 'https://unpkg.com/scrollreveal' %>
+        <!-- Fotorama from CDNJS, 19 KB -->
+        <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js' %>
+        <%#= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' %>
+    </body>
+
+</html>
+<% if @blog_article && @blog_article.image.present? %>
+<%= javascript_tag "var orig_width = #{@blog_article.image.width}" %>
+<% end %>

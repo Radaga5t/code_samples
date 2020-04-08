@@ -1,0 +1,6 @@
+en:
+  notifications:
+    u2:
+      email:
+        title: "Вы успешно опубликовали задание #{subject.title}"
+        message: "#{subject.title} в #{subject.published_at}"

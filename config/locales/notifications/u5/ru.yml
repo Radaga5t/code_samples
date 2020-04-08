@@ -1,0 +1,11 @@
+ru:
+  notifications:
+    u5:
+      email:
+        title: Правила работы в сервисе
+        message: Правила работы в сервисе
+      viber:
+        message: Правила работы в сервисе
+      site:
+        title: Правила работы в сервисе
+        message: Правила работы в сервисе

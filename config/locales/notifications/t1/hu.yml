@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    t1:
+      email:
+        title: "Sikeresen közzétetted a következő feladatot: \"#{ subject.title.truncate(20) }\""
+        message: "Sikeresen közzétetted a következő feladatot: \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "Sikeresen közzétetted a következő feladatot: \"#{ subject.title.truncate(20) }\""
+        message: "Sikeresen közzétetted a következő feladatot: \"#{ subject.title.truncate(20) }\""
+      site:
+        title: "Sikeresen közzétetted a következő feladatot: \"#{ subject.title.truncate(20) }\""
+        message: "Sikeresen közzétetted a következő feladatot: \"#{ subject.title.truncate(20) }\""

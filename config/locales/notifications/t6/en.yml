@@ -1,0 +1,12 @@
+en:
+  notifications:
+    t6:
+      email:
+        title: "#{ target.author.name } specialist informed us, that he completed the task"
+        message: "#{ target.author.name } specialist informed us, that he completed the task"
+      viber:
+        title: "#{ target.author.name } specialist informed us, that he completed the task"
+        message: "#{ target.author.name } specialist informed us, that he completed the task"
+      site:
+        title: "Specialist sen a review about your task \"#{ subject.title.truncate(20) }\""
+        message: "Specialist sen a review about your task \"#{ subject.title.truncate(20) }\""

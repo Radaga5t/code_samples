@@ -1,0 +1,6 @@
+en:
+  sendpulse:
+    sms_confirmation: "Qjob.hu – confirmation code: %{code}"
+    viber:
+      button_text: "Go to task"
+

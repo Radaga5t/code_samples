@@ -1,0 +1,11 @@
+en:
+  notifications:
+    u4:
+      email:
+        title: Congratulations, you've become a Qjob Specialist
+        message: Congratulations, you've become a Qjob Specialist
+      viber:
+        message: Congratulations, you've become a Qjob Specialist
+      site:
+        title: Congratulations, you've become a Qjob Specialist
+        message: Congratulations, you've become a Qjob Specialist

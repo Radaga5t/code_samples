@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    t8:
+      email:
+        title: Elküldted első ajánlatod a Qjob.hu-ra!
+        message: Elküldted első ajánlatod a Qjob.hu-ra!
+      viber:
+        title: Elküldted első ajánlatod a Qjob.hu-ra!
+        message: Elküldted első ajánlatod a Qjob.hu-ra!
+      site:
+        title: Elküldted első ajánlatod a Qjob.hu-ra!
+        message: Elküldted első ajánlatod a Qjob.hu-ra!

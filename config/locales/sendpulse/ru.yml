@@ -1,0 +1,5 @@
+ru:
+  sendpulse:
+    sms_confirmation: "Qjob.hu – код подтверждения: %{code}"
+    viber:
+      button_text: "Перейти к заданию"

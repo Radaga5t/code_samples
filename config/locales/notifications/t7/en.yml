@@ -1,0 +1,12 @@
+en:
+  notifications:
+    t7:
+      email:
+        title: "\"#{ subject.title.truncate(20) }\" - #{ subject.budget.format }"
+        message: "\"#{ subject.title.truncate(20) }\" - #{ subject.budget.format }"
+      viber:
+        title: "\"#{ subject.title }\" - #{ subject.budget.format }"
+        message: "\"#{ subject.title }\" - #{ subject.budget.format }"
+      site:
+        title: "\"#{ subject.title.truncate(20) }\" - #{ subject.budget.format }"
+        message: "\"#{ subject.title.truncate(20) }\" - #{ subject.budget.format }"

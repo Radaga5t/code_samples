@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    s2:
+      email:
+        title: Korlátlan előfizetésed érvényessége lejárt.
+        message: Korlátlan előfizetésed érvényessége lejárt.
+      viber:
+        title: Korlátlan előfizetésed érvényessége lejárt.
+        message: Korlátlan előfizetésed érvényessége lejárt.
+      site:
+        title: Korlátlan előfizetésed érvényessége lejárt.
+        message: Korlátlan előfizetésed érvényessége lejárt.

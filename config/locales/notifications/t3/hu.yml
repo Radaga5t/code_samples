@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    t3:
+      email:
+        title: "Szakemberünk, #{ target.author.name }, lemondta a feladatot"
+        message: "Szakemberünk, #{ target.author.name }, lemondta a feladatot"
+      viber:
+        title: "Szakemberünk, #{ target.author.name }, lemondta a feladatot"
+        message: "Szakemberünk, #{ target.author.name }, lemondta a feladatot"
+      site:
+        title: "Szakemberünk, #{ target.author.name }, lemondta a feladatot"
+        message: "Szakemberünk, #{ target.author.name }, lemondta a feladatot"

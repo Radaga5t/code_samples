@@ -1,0 +1,12 @@
+ru:
+  notifications:
+    t6:
+      email:
+        title: "Исполнитель #{ target.author.name } отметил, что выполнил задание"
+        message: "Исполнитель #{ target.author.name } отметил, что выполнил задание"
+      viber:
+        title: "Исполнитель #{ target.author.name } отметил, что выполнил задание"
+        message: "Исполнитель #{ target.author.name } отметил, что выполнил задание"
+      site:
+        title: "Исполнитель оставил отзыв о вашем задании \"#{ subject.title.truncate(20) }\""
+        message: "Исполнитель оставил отзыв о вашем задании \"#{ subject.title.truncate(20) }\""

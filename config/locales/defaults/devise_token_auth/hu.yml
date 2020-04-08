@@ -1,0 +1,36 @@
+hu:
+  devise_token_auth:
+    sessions:
+      not_confirmed: "A Profiloldaladat visszaigazoló levelet '%{email}' elküldtük az email címedre. Kövesd az emailben szereplő utasításokat, hogy a profiloldaladat aktíválhasd."
+      bad_credentials: "Hibás felhasználónév vagy jelszó. Kérjük, próbáld meg újból."
+      not_supported: "Belépéshez használd a  POST /sign_in. Nem támogatja a GET igényeket."
+      user_not_found: "Nincs ilyen felhasználó vagy nem jelentkeztél be."
+    token_validations:
+      invalid: "Hibás felhasználónév vagy jelszó."
+    registrations:
+      missing_confirm_success_url: "Hiányzik a 'confirm_success_url'."
+      redirect_url_not_allowed: "Tilos az átírányítás '%{redirect_url}'."
+      email_already_exists: "Profiloldal '%{email}' már létezik"
+      account_with_uid_destroyed: "Profiloldal uid-vel '%{uid}' törölve."
+      account_to_destroy_not_found: "Törölni kivánt profiloldal nem található.."
+      user_not_found: "Felhasználó nem található."
+    omniauth:
+      not_allowed_redirect_url: "Átírányítás '%{redirect_url}' nem engedélyezett."
+      new_window_title: "Authentication"
+      redirecting: "Redirecting..."
+    passwords:
+      missing_email: "Add meg email címedet."
+      missing_redirect_url: "Átírányítás címe nem található."
+      not_allowed_redirect_url: "Átírányítás '%{redirect_url}' nem engedélyezett."
+      sended: "Jelszó visszaállításának leírását kiküldtük email címedre '%{email}'."
+      user_not_found: "'%{email}' email címmel felhasználó nem található."
+      password_not_required: "Az adott profiloldal nem igényel jelszót. Belépéshez használd a '%{provider}' profiloldalt."
+      missing_passwords: "Töltsd ki kérjük a 'jelszó' és 'ismételd meg a jelszót' mezőket."
+      successfully_updated: "Jelszavadat sikeresen frissítetted."
+  errors:
+    messages:
+      validate_sign_up_params: "Kérjük add meg a regisztrációhoz szükséges adatokat az igénylőben.."
+      validate_account_update_params: "Kérjük add meg a profiloldal frissítéséhez szükséges adatokat az igénylőben."
+      not_email: "nem egy email"
+  hello: "Szia"
+  welcome: "Üdvözlünk"

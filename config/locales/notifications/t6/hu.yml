@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    t6:
+      email:
+        title: "Szakemberünk, #{ target.author.name }, jelezte, teljesítette a feladatod"
+        message: "Szakemberünk, #{ target.author.name }, jelezte, teljesítette a feladatod"
+      viber:
+        title: "Szakemberünk, #{ target.author.name }, jelezte, teljesítette a feladatod"
+        message: "Szakemberünk, #{ target.author.name }, jelezte, teljesítette a feladatod"
+      site:
+        title: "\"#{ subject.title.truncate(20) }\" feladatodra értékelést kaptál egy szakembertől"
+        message: "\"#{ subject.title.truncate(20) }\" feladatodra értékelést kaptál egy szakembertől"

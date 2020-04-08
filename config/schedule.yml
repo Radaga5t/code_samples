@@ -1,0 +1,34 @@
+Refresh user ratings:
+  cron: "0 0 * * *"
+  class: "RefreshUserRatingWorker"
+  queue: default
+
+Check for outdated tasks:
+  cron: "*/30 * * * *"
+  class: "TasksExpirationWorker"
+  queue: low
+
+Check for outdated task responses:
+  cron: "*/30 * * * *"
+  class: "TaskResponsesExpirationWorker"
+  queue: low
+
+Check deferred events in redis:
+  cron: "0 4 * * *"
+  class: "NotificationWorkers::DeferredEventsCheckWorker"
+  queue: low
+
+Check inactive users:
+  cron: "0 4 * * *"
+  class: "CheckInactiveUsersWorker"
+  queue: low
+
+Generate sitemap:
+  cron: "0 6 * * *"
+  class: "SitemapGeneratorWorker"
+  queue: low
+
+Clear old cache:
+  cron: "30 6 * * *"
+  class: "ClearRedisCacheWorker"
+  queue: low

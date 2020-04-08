@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    t2:
+      email:
+        title: "Új ajánlat érkezett a következő feladatra: \"#{ subject.title.truncate(20) }\""
+        message: "Új ajánlat érkezett a következő feladatra: \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "Új ajánlat érkezett a következő feladatra: \"#{ subject.title }\""
+        message: "Új ajánlat érkezett a következő feladatra: \"#{ subject.title }\""
+      site:
+        title: "#{ subject.task_responses_count } új ajánlat érkezett a következő feladatra: \"#{ subject.title.truncate(20) }\""
+        message: "#{ subject.task_responses_count } új ajánlat érkezett a következő feladatra: \"#{ subject.title.truncate(20) }\""

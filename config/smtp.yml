@@ -1,0 +1,16 @@
+default: &default
+  address: <%= Rails.application.credentials.dig(:smtp, :address) %>
+  port: <%= Rails.application.credentials.dig(:smtp, :port) %>
+  domain: <%= Rails.application.credentials.dig(:smtp, :domain) %>
+  username: <%= Rails.application.credentials.dig(:smtp, :username) %>
+  password: <%= Rails.application.credentials.dig(:smtp, :password) %>
+  enable_starttls_auto: true
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

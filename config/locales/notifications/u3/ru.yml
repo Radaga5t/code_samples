@@ -1,0 +1,11 @@
+ru:
+  notifications:
+    u3:
+      email:
+        title: Первые шаги на Qjob
+        message: Первые шаги на Qjob
+      viber:
+        message: Первые шаги на Qjob
+      site:
+        title: Первые шаги на Qjob
+        message: Первые шаги на Qjob

@@ -1,0 +1,151 @@
+<table class="row thrid" style="border-collapse:collapse;border-spacing:0;display:table;font-family:sans-serif;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="site-block3" style="margin:0 auto">
+                                <div class="email-title">
+                                    <h1 style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif,Arial;font-size:20px;font-weight:400;line-height:1.3;margin:24px 0 24px 0;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">
+                                        Üdvözölünk, <span style="color:#13c98a"><%= @notification.subject.user.name %></span>!
+                                    </h1>
+                                </div>
+                                <div class="review">
+                                    <p class="paragraph" style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:20px;margin:0 0 15px 0;margin-bottom:10px;padding:0;text-align:left">
+                                        <%= @notification.target.author.name %>
+                                        jelezte felénk, hogy lemondta a következő feladatot:
+                                        <%= link_to "«#{ @notification.subject.title }»",
+                                            "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/#{@notification.subject.id}",
+                                            {style: "Margin:0;color:#13c98a;font-family:sans-serif;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"} %>.
+                                        <br>
+                                        Hagyott számunkra egy értékelést is:
+                                    </p>
+                                    <div class="review-block" style="background:#fff;border:1px solid #ede8f7;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1);box-sizing:border-box;padding:24px 24px 24px 24px">
+                                        <div class="first-info" style="height:75px">
+                                            <span class="avatar" style="border:2px solid #3adb76;border-radius:50%;display:block;float:left;margin:0 5px 5px 0;vertical-align:top">
+                                                <%# Performer's avatar %>
+                                                <% if @notification.target.author.photo&.file&.url(:small) %>
+                                                  <%= image_tag @notification.target.author.photo.file.url(:small), {alt: 'author', style: "-ms-interpolation-mode:bicubic;border:2px solid #fff;border-radius:50%;clear:both;display:block;height:62px;max-width:100%;outline:0;text-decoration:none;width:62px"} %>
+                                                <% end %>
+                                            </span>
+                                            <span class="name-block" style="display:block;float:left;width:68%">
+                                                <p class="name" style="Margin:0;Margin-bottom:10px;color:#2e09b6;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:22px;margin:5px 0 4px 9px!important;margin-bottom:10px;padding:0;text-align:left;vertical-align:middle">
+                                                    <%= @notification.target.author.name %>
+                                                    <%# Verified user's mark (shield with check sign) %>
+                                                   <% if @notification.target.author.user_verification.id_confirmed? %>
+                                                    <%= image_tag 'mails/shield.png',
+                                                                      {alt: 'shield', class: "shield", style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;max-width:100%;outline:0;text-decoration:none;vertical-align:sub;width:auto"} %>
+                                                    <% end %>
+                                                </p>
+                                                <p class="likes" style="Margin:0;Margin-bottom:10px;color:#6a6976;font-family:sans-serif,Arial;font-size:12px;font-weight:400;line-height:14px;margin:0 0 2px 8px!important;margin-bottom:10px;padding:0;text-align:left">
+                                                    <%# Count of performer's likes %>
+                                                    <span style="color:#6a6976;display:inline-block;font-size:12px;line-height:17px;margin-right:3px;vertical-align:middle">
+                                                        <%= image_tag 'mails/like.png',
+                                                                    {alt: 'like', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;margin-right:4px;max-width:100%;outline:0;text-decoration:none;vertical-align:middle;width:13px"} %>
+                                                        <%= @notification.target.author.reviews_statistic[:positive] %>
+                                                    </span>
+                                                    <%# Count of performer's dislikes %>
+                                                    <span style="color:#6a6976;display:inline-block;font-size:12px;line-height:17px;margin-right:3px;vertical-align:middle">
+                                                        <%= image_tag 'mails/dislike.png',
+                                                                    {alt: 'dislike', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;margin-right:4px;max-width:100%;outline:0;text-decoration:none;vertical-align:middle;width:13px"} %>
+                                                        <%= @notification.target.author.reviews_statistic[:negative] %>
+                                                    </span>
+                                                </p>
+                                                <p class="task-status" style="Margin:0;Margin-bottom:10px;color:#9b99aa;font-family:sans-serif,Arial;font-size:12px;font-weight:400;line-height:14px;margin:3px 0 5px 8px!important;margin-bottom:10px;padding:0;text-align:left">
+                                                    Feladat:
+                                                    <span>
+                                                        <%# Task title %>
+                                                        <%= @notification.subject.title %>
+                                                    </span>
+                                                </p>
+                                                <p class="task-status" style="Margin:0;Margin-bottom:10px;color:#9b99aa;font-family:sans-serif,Arial;font-size:12px;font-weight:400;line-height:14px;margin:3px 0 5px 8px!important;margin-bottom:10px;padding:0;text-align:left">
+                                                    <%# Task status %>
+                                                    Visszavonva
+                                                </p>
+                                            </span>
+                                        </div>
+                                        <div class="self-description" style="clear:both;margin:20px 0 10px 0">
+                                            <%# Review text %>
+                                            <%= @notification.target.text %>
+                                        </div>
+                                        <div class="hr">
+                                            <hr style="border:0;border-top:1px solid #dadada;display:block;height:1px;margin:10px 0!important;padding:0">
+                                        </div>
+                                        <div class="rating-block" style="margin:14px 0 0 0">
+                                            <div class="rate-list" style="display:inline-block;margin:0 15px 10px 0;vertical-align:top;width:110px">
+                                                <p style="Margin:0;Margin-bottom:10px;color:#9b99aa;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:18px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                                    Értékelés:
+                                                    <%= (@notification.target.courtesy + @notification.target.punctuality + @notification.target.adequacy) / 3 %>
+                                                </p>
+                                            </div>
+                                            <div class="rate-list" style="display:inline-block;margin:0 15px 10px 0;vertical-align:top;width:110px">
+                                                <p style="Margin:0;Margin-bottom:10px;color:#9b99aa;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:18px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                                    Udvariasság
+                                                </p>
+                                                <div class="rate-stars" style="width:initial">
+                                                    <% for i in 1..@notification.target.courtesy do %>
+                                                    <%= image_tag 'mails/star.png', {alt: 'star', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                                    <% end %>
+                                                    <% for i in 1..5-@notification.target.courtesy do %>
+                                                    <%= image_tag 'mails/star-grey.png', {alt: 'star', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                                    <% end %>
+                                                </div>
+                                            </div>
+                                            <div class="rate-list" style="display:inline-block;margin:0 15px 10px 0;vertical-align:top;width:110px">
+                                                <p style="Margin:0;Margin-bottom:10px;color:#9b99aa;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:18px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                                    Pontosság
+                                                </p>
+                                                <div class="rate-stars" style="width:initial">
+                                                    <% for i in 1..@notification.target.punctuality do %>
+                                                    <%= image_tag 'mails/star.png', {alt: 'star', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                                    <% end %>
+                                                    <% for i in 1..5-@notification.target.punctuality do %>
+                                                    <%= image_tag 'mails/star-grey.png', {alt: 'star', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                                    <% end %>
+                                                </div>
+                                            </div>
+                                            <div class="rate-list" style="display:inline-block;margin:0 15px 10px 0;vertical-align:top;width:110px">
+                                                <p style="Margin:0;Margin-bottom:10px;color:#9b99aa;font-family:sans-serif,Arial;font-size:14px;font-weight:400;line-height:18px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                                    Hozzáállás
+                                                </p>
+                                                <div class="rate-stars" style="width:initial">
+                                                    <% for i in 1..@notification.target.adequacy do %>
+                                                    <%= image_tag 'mails/star.png', {alt: 'star', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                                    <% end %>
+                                                    <% for i in 1..5-@notification.target.adequacy do %>
+                                                    <%= image_tag 'mails/star-grey.png', {alt: 'star', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;max-width:100%;outline:0;text-decoration:none;width:auto"} %>
+                                                    <% end %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="buttons nocenter marginOrigin" style="margin:24px 0 20px 21px;text-align:initial">
+                                    <%= link_to 'Megosztom az értékelést',
+                                                "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/#{@notification.subject.id}",
+                                                {class: "button inline", style: "Margin:0;background:#13c98a;border-radius:44px;color:#fff;display:inline-block;font-family:sans-serif,Arial;font-size:14px;font-weight:600;line-height:16px;margin:4px 5px;padding: 9px 16px 11px 16px;text-align:center;text-decoration:none"} %>
+                                </div>
+                                <div class="text-block-offers">
+                                    <p class="paragraph" style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:16px;font-weight:400;line-height:22px;margin:0 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                        Az általad leadott értékelés segíteni fog a többi szakembernek a megrendelők, megrendelések kiválasztásában. Az értékeléseidnek is köszönhetően a Qjob.hu olyan közösséget épít, amely csak értékelt és megbízható tagokból áll!
+                                    </p>
+                                    <p class="paragraph" style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:16px;font-weight:400;line-height:22px;margin:0 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                        Ha bármilyen észrevételed van, kérünk, értesíts minket a következő e-mail címen:
+                                        <%= link_to 'office@qjob.hu',
+                                                    'mailto:office@qjob.hu',
+                                                    {style: "Margin:0;color:#13c98a;font-family:sans-serif,Arial;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"} %>.
+                                    </p>
+                                    <p class="paragraph" style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:16px;font-weight:400;line-height:22px;margin:0 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                        Együtt még jobbá tesszük a Qjob.hu-t!
+                                    </p>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>

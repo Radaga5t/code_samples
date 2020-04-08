@@ -1,0 +1,13 @@
+development:
+  adapter: any_cable
+
+test:
+  adapter: async
+
+production:
+  adapter: any_cable
+  access_logs_disabled: false
+# https://hub.docker.com/r/anycable/anycable-go/
+# bundle exec anycable
+# anycable-go --headers=cookie,origin --port=3334
+# bundle exec anycable --http-health-port=54321 --server-command "anycable-go --headers=cookie,origin --port=3334"

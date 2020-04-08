@@ -1,0 +1,76 @@
+hu:
+  devise:
+    confirmations:
+      confirmed: "Profilodat sikeresen visszaigazoltuk."
+      send_instructions: "Perceken belül egy emailt kapsz a profiloldalad visszaigazolásának menetéről."
+      send_paranoid_instructions: "Amennyiben email címed megvan az adatbázisunkban, úgy perceken belül kapsz egy email tőlünk a profiloldalad visszaigazolásának menetéről."
+    failure:
+      already_authenticated: "Már bejelentkeztél az oldalra."
+      social_already_exists: "Ezt a közösségi profiloldalt már valaki használja."
+      inactive: "Profiloldalad még nem aktív."
+      invalid: "Hibás %{authentication_keys} vagy jelszó."
+      locked: "Profiloldalad korlátozva van."
+      last_attempt: "Még egy próbálkozásod van a helyes jelszó megadásával, mielőtt lekorlátozunk."
+      not_found_in_database: "Hibás %{authentication_keys} vagy jelszó."
+      timeout: "Aktivitási időd lejárt. Kérjük jelentkezz be ismét az oldalra."
+      unauthenticated: "Kérjük jelentkezz be vagy regisztrálj az oldalon."
+      unconfirmed: "Profiloldal visszaigazolása szükséges."
+    mailer:
+      confirmation_instructions:
+        user_subject: "Igazold vissza az e-mail címedet!"
+        confirm_link_msg: "Az alábbi lonkre kattintva igazold vissza email címedet:"
+        confirm_account_link: "Igazold vissza profiloldaladat"
+      reset_password_instructions:
+        user_subject: "Jelszó módosítás kérése történt a Qjob.hu oldalon!"
+        request_reset_link_msg: "Valaki linket kért jelszó módosításra. Módosíthatod jelszavadat az alábbi linkkel."
+        password_change_link: "Jelszó módosítása"
+        ignore_mail_msg: "Ha nem te kérted ezt, akkor kérjük ne reagálj erre a levélre."
+        no_changes_msg: "Jelszavad nem fog megváltozni, amig nem nyitod meg a fenti linket és nem hozol létre új jelszót."
+      unlock_instructions:
+        user_subject: "Profiloldal korlátozásának visszaállítása."
+        account_lock_msg: "Profiloldalad letiltásra került, mivel túl sok sikertelen belépés volt."
+        unlock_link_msg: "Kattits a lenti hivatkozásra, hogy a profiloldalad korlátozását felold."
+        unlock_link: "Profiloldalam korlátozásának feloldása"
+      email_changed:
+        user_subject: "Еmail cím megváltozott"
+      password_change:
+        user_subject: "Jelszó megváltozott."
+      new_oauth_user:
+        user_subject: "Üdvözlünk! Sikeresen regisztráltál."
+    omniauth_callbacks:
+      failure: "Nem jelentkezhetsz be az oldalra a %{kind} profiloldalról, mivel \"%{reason}\"."
+      success: "Bejelentkezés az oldalra a %{kind} profiloldalról történt."
+    passwords:
+      no_token: "Ez az oldal csak a jelszó módosításához érhető el emailről történő átírányítás során. Amennyiben az emailben kapott linken lettél átirányítva, kérjük győződj meg, hogy a teljes URLt használod."
+      send_instructions: "Perceken belül kapsz egy emailt a jelszó visszaállításának leírásával."
+      send_paranoid_instructions: "Amennyiben email címed megvan az adatbázisunkban, úgy perceken belül kapsz egy email tőlünk a jelszó visszaállításának menetéről."
+      updated: "Jelszó sikeres módosítása. Sikeresen bejelentkeztél az oldalon."
+      updated_not_active: "Jelszó sikeres módosítása."
+    registrations:
+      destroyed: "Visszavárunk! Profiloldaladat sikeresen törölted. Reméljük, hamarosan visszajössz."
+      signed_up: "Üdvözlünk! Sikeresen regisztráltál."
+      signed_up_but_inactive: "Sikeresen regisztráltál. Ettől függetlenül, egyelőre nem tudsz bejelentkezni, mivel profiloldalad még nem aktív."
+      signed_up_but_locked: "Sikeresen regisztráltál. Ettől függetlenül, egyelőre nem tudsz bejelentkezni, mivel profiloldalad le van korlátozva."
+      signed_up_but_unconfirmed: "Perceken belül kapsz egy emailt a profiloldalad visszaigazolásának menetéről."
+      update_needs_confirmation: "Profiloldalad sikeresen frissült, szükséges új email címednek a visszaigazolása. Kérjük ellenőrizd email fiókod és kattints a \"Visszaigazol\" linkre, hogy az email módosítás sikeres legyen."
+      updated: "Profiloldalad sikeresen módosult."
+    sessions:
+      signed_in: "Sikeres bejelentkezés"
+      signed_out: "Sikeres kijelentkezés"
+      already_signed_out: "Kijelentkezve"
+    unlocks:
+      send_instructions: "Perceken belül kapsz egy emailt profiloldalad korlátozásának feloldásának menetéről."
+      send_paranoid_instructions: "Amennyiben profiloldalad létezik, úgy perceken belül kapsz egy emailt profiloldalad korlátozásának feloldásának menetéről."
+      unlocked: "Profiloldalad korlátozása megszünt. Sikeresen bejelentkeztél az oldalra."
+  errors:
+    messages:
+      already_confirmed: "már visszaigazolt. Kérjük, jelentkezz be az oldalra"
+      confirmation_period_expired:  " %{period} időn belül vissza kell igazolnod, kérjük, igényeljél új aktiválási linket"
+      expired: "lejárt. Kérjük igényeljél újat."
+      not_found: "nem talált"
+      not_locked: "nem korlátozott"
+      not_saved:
+        one: "%{resource}: sikertelen mentés %{count} hiba miatt"
+        few: "%{resource}: sikertelen mentés %{count} hibák miatt"
+        many: "%{resource}: sikertelen mentés %{count} hibák miatt"
+        other: "%{resource}: sikertelen mentés %{count} hiba miatt"

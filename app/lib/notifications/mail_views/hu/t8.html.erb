@@ -1,0 +1,158 @@
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="top-title small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <h1 style="Margin:0;Margin-bottom:10px;color:inherit;font-family:sans-serif,Arial;font-size:20px;font-weight:400;line-height:1.3;margin:24px 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left;word-wrap:normal">
+                                Üdvözlünk, <span style="color:#13c98a"><%= @notification.target.user.name %></span>!
+                            </h1>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <p class="paragraph big" style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:22px;margin:0 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                Sikeresen elküldted első ajánlatodat következő feladatra:
+                                <%= link_to "«#{ @notification.subject.title }»",
+                                            "#{ENV['PROTOCOL']}://#{ENV['HOST']}/tasks/#{@notification.subject.id}",
+                                            {style: "Margin:0;color:#13c98a;font-family:sans-serif,Arial;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"} %>, gratulálunk!
+                            </p>
+                            <p class="paragraph big" style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:22px;margin:0 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                Ha az ajánlatod felkelti a megrendelő érdeklődését, felveszi veled a kapcsolatot a Qjob.hu chaten keresztül, vagy azonnal kiválaszt, mint szakembert.
+                            </p>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <center data-parsed style="min-width:580px;width:100%">
+                                <div class="alert-message float-center" align="center" style="border:1px solid rgba(0,0,0,.1);border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1);box-sizing:border-box;display:block;margin:24px 15px 10px;min-height:210px;padding:12px 15px 12px 15px">
+                                    <%= image_tag 'mails/alert.png',
+                                                  {alt: 'alert', style: "-ms-interpolation-mode:bicubic;clear:both;display:inline-block;margin:15px 15px 15px 5px;max-width:100%;outline:0;text-decoration:none;vertical-align:middle;width:183px"} %>
+                                    <span style="color:#1d1539;display:inline-block;font-family:sans-serif;font-size:14px;line-height:20px;padding-top:0;text-align:left;vertical-align:middle;width:290px">
+                                        Amint megbeszélitek a feladat részleteit, kérd meg a megrendelőt, válasszon ki téged, mint szakembert, ha eddig nem tette volna meg. A szakember kiválasztásáról téged is értesítünk, és megadjuk a megrendelő telefonszámát is, hogy azt a megbízás közben se veszíthesd el.
+                                    </span>
+                                </div>
+                            </center>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <p class="paragraph big" style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:22px;margin:0 15px 24px 15px;margin-bottom:10px;padding:0;text-align:left">
+                                Az ajánlataidat mindig nagyon részletesen és érthetően írd körül. Minél részletesebben írod le a referenciáidat, tapasztalataidat, ajánlatod előnyeit, annál nagyobb eséllyel választ a megrendelő téged. Itt egy példa egy sikeres ajánlatra:
+                            </p>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row three" style="border-collapse:collapse;border-spacing:0;display:table;font-family:sans-serif;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="site-block" style="margin:0 auto">
+                                <div class="offer" style="border:1px solid #ede8f7;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.1);box-sizing:border-box;margin:5px 15px;padding:18px 16px">
+                                    <div class="self-description nomargin" style="margin-bottom:0;margin-left:5px">
+                                        <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:14px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                            Szia!
+                                        </p>
+                                        <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:14px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                            Kovács József vagyok, közel 20 éve, 2000 óta foglalkozom lakások, házak felújításával. Minden kivitelezési munkához saját szerszámmal és nagy tapasztalattal rendelkezem, nem közvetítő vagyok, a munkát saját, négy fős csapatommal végzem el. Minden megbízásról szerződést kötök, és 12 hónap garanciát vállalok. A megbízási díjat részletekben, minden munkaszakasz elvégzése után kérem.
+                                        </p>
+                                        <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:14px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                            Minden lakás és házfelújítással kapcsolatos gondot magamra vállalok, akár az engedélyek intézést is. A megrendelőnek csak az alapanyagokról kell gondoskodni, amelyhez pontos listát, szükség esetén a beszerzési forráshoz is segítséget nyújtok. Az adatlapomon több kép is található az eddigi munkáimról.
+                                        </p>
+                                        <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:14px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                            Alább az árainkról:
+                                        </p>
+                                        <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:14px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                            <b>
+                                                Burkolás:
+                                            </b>
+                                            3000 Ft/m2-től.
+                                        </p>
+                                        <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:14px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                            <b>
+                                                Glettel, csiszolt, festett falfelület:
+                                            </b>
+                                            4500 Ft/m2-től
+                                        </p>
+                                        <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:14px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                            A megbízás elnyerését követően a szakmai konzultáció és a kiszállás, kitelepülés ingyenes.
+                                        </p>
+                                        <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:14px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                            Munkaidőben bármikor beszélhetünk az árakról, a munka részleteiről, írj bátran! Minden feladatot gyorsan és a legjobb minőségben kivitelezünk.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+    <tbody>
+        <tr style="padding:0;text-align:left;vertical-align:top">
+            <th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0;padding-right:0;text-align:left;width:580px">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+                    <tr style="padding:0;text-align:left;vertical-align:top">
+                        <th style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+                            <div class="text-block-offers margirl" style="margin:24px 15px 24px 15px!important">
+                                <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:16px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                    Igyekezz minél több ajánlatot adni, közben kísérletezz a lehető legjobb ajánlat megírásával! Ne feledd, értékelésed a megrendelések mennyiségétől, minőségétől, és persze a megrendelők által hagyott visszajelzésektől isfügg!
+                                </p>
+                                <p style="Margin:0;Margin-bottom:10px;color:#1d1539;font-family:sans-serif;font-size:16px;font-weight:400;line-height:22px;margin:0;margin-bottom:10px;padding:0;text-align:left">
+                                    Keress feladatokat, és keress pénzt a Qjob.hu-val!
+                                </p>
+                            </div>
+                        </th>
+                        <th class="expander" style="Margin:0;color:#0a0a0a;font-family:sans-serif,Arial;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0"></th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+en:
+  notifications:
+    t2:
+      email:
+        title: "You received a new offer for task: \"#{ subject.title.truncate(20) }\""
+        message: "You received a new offer for task: \"#{ subject.title.truncate(20) }\""
+      viber:
+        title: "You received a new offer for task: \"#{ subject.title }\""
+        message: "You received a new offer for task: \"#{ subject.title }\""
+      site:
+        title: "#{ subject.task_responses_count } new offers for task: \"#{ subject.title.truncate(20) }\""
+        message: "#{ subject.task_responses_count } new offers for task: \"#{ subject.title.truncate(20) }\""

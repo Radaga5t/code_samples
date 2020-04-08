@@ -1,0 +1,11 @@
+ru:
+  notifications:
+    u6:
+      email:
+        title: Ваш акаунт заблокирован
+        message: Ваш акаунт заблокирован
+      viber:
+        message: Ваш акаунт заблокирован
+      site:
+        title: Ваш акаунт заблокирован
+        message: Ваш акаунт заблокирован

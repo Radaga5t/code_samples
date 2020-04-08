@@ -1,0 +1,12 @@
+hu:
+  notifications:
+    s1:
+      email:
+        title: "#{ target.service.duration } napos korlátlan előfizetésedet aktiváltuk!"
+        message: "#{ target.service.duration } napos korlátlan előfizetésedet aktiváltuk!"
+      viber:
+        title: "#{ target.service.duration } napos korlátlan előfizetésedet aktiváltuk!"
+        message: "#{ target.service.duration } napos korlátlan előfizetésedet aktiváltuk!"
+      site:
+        title: "#{ target.service.duration } napos korlátlan előfizetésedet aktiváltuk!"
+        message: "#{ target.service.duration } napos korlátlan előfizetésedet aktiváltuk!"
