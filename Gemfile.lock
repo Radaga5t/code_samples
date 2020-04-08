@@ -379,7 +379,7 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     public_suffix (3.1.0)
-    puma (3.12.1)
+    puma (3.12.4)
     punching_bag (0.6.1)
       railties (>= 3.2)
       voight_kampff (~> 0.2)
@@ -672,7 +672,7 @@ DEPENDENCIES
   pg_search
   pronto
   pronto-rubocop
-  puma (~> 3.11)
+  puma (~> 3.12)
   punching_bag
   pundit (>= 2.0.0)
   pundit-matchers (~> 1.6.0)
