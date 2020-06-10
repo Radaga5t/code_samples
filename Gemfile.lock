@@ -182,7 +182,7 @@ GEM
     fuubar (2.4.1)
       rspec-core (~> 3.0)
       ruby-progressbar (~> 1.4)
-    geocoder (1.5.2)
+    geocoder (1.6.1)
     gitlab (4.11.0)
       httparty (~> 0.14, >= 0.14.0)
       terminal-table (~> 1.5, >= 1.5.1)
