@@ -388,7 +388,7 @@ GEM
     pundit-matchers (1.6.0)
       rspec-rails (>= 3.0.0)
     raabro (1.1.6)
-    rack (2.0.7)
+    rack (2.2.3)
     rack-cors (1.0.3)
     rack-pjax (1.1.0)
       nokogiri (~> 1.5)
