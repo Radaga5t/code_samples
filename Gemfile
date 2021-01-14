@@ -63,7 +63,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'rails-assets-jcrop', source: 'https://rails-assets.org'
 gem 'colorscore' ## getting dominant colors from image
 gem 'file_validators'
-gem 'rails_admin', '~> 1.4', '>= 1.4.2'
+gem 'rails_admin', '~> 1.4'
 gem 'ckeditor', '~> 4.2'
 gem 'rails_admin_softwarebrothers_theme', :git => 'https://github.com/SoftwareBrothers/rails_admin_softwarebrothers_theme'
 
