@@ -59,7 +59,7 @@ gem 'sitemap_generator'
 
 # Use ActiveStorage variant
 gem 'mini_magick', '~> 4.8'
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'rails-assets-jcrop', source: 'https://rails-assets.org'
 gem 'colorscore' ## getting dominant colors from image
 gem 'file_validators'
